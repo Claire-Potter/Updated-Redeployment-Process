@@ -551,7 +551,7 @@ def update_single_cell(emp_value, worksheet, column_value, change_value):
     col_no = "%s" % (cell_2.col)
     sheet.update_cell(row_no, col_no, change_value)
     print(f"{worksheet} cell: row{row_no}, col{col_no} successfully"
-          f"updated with value: {change_value} \n")
+          f" updated with value: {change_value} \n")
 
 
 def update_process():
@@ -650,14 +650,14 @@ def update_exit_date_status(worksheet, worksheet_two, emp_value, status_value):
         today_date = datetime.now().strftime("%d/%m/%Y")
         sheet.update_cell(row_no, col_no, today_date)
         print(f"{worksheet_two} cell: row{row_no}, col{col_no} successfully"
-              f"updated with value: {today_date} \n")
+              f" updated with value: {today_date} \n")
         days_in_pool("redeployment_pool", emp_value)
         cell_3 = sheet.find("Status")
         col_2_no = "%s" % (cell_3.col)
         status_value = status_value
         sheet.update_cell(row_no, col_2_no, status_value)
         print(f"{worksheet_two} cell: row{row_no}, col{col_2_no} successfully"
-              f"updated with value: {status_value} \n")
+              f" updated with value: {status_value} \n")
     except ValueError as e:
         print(f" A ValueError has occurred: {e}")
         print("Please repeat the place employee process.\n")
@@ -712,7 +712,7 @@ def days_in_pool(worksheet, emp_value):
     col_3_no = "%s" % (cell_4.col)
     sheet.update_cell(row_no, col_3_no, int(days_no))
     print(f"{worksheet} cell: row{row_no}, col{col_3_no} successfully"
-          f"updated with value: {days_no} \n")
+          f" updated with value: {days_no} \n")
 
 
 def place_employee():
